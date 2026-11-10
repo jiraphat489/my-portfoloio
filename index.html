@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | แฟ้มสะสมผลงาน</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Prompt', sans-serif;
+    background: #f1f6fb;
+    color: #263d56;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #091d36, #174b78, #7bb5dc);
+    color: white;
+    text-align: center;
+    padding: 75px 20px 65px;
+}
+
+header .small-title {
+    letter-spacing: 5px;
+    font-size: 13px;
+    color: #c6e5fa;
+}
+
+header h1 {
+    font-size: 42px;
+    letter-spacing: 3px;
+    margin: 12px 0;
+}
+
+header p {
+    font-size: 15px;
+    color: #e4f2ff;
+}
+
+/* NAVIGATION */
+nav {
+    background: #0d2949;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 17px 10px;
+    gap: 35px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 15px #102d5020;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #8fd2ff;
+}
+
+/* INTRO */
+.intro {
+    text-align: center;
+    padding: 65px 20px 35px;
+}
+
+.intro h2 {
+    color: #174b78;
+    font-size: 27px;
+    margin-bottom: 12px;
+}
+
+.intro p {
+    color: #71869b;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* MAIN CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* PROFILE SECTION */
+.profile-section {
+    background: white;
+    border-radius: 24px;
+    margin: 35px 0;
+    padding: 40px;
+    border: 1px solid #dceaf5;
+    box-shadow: 0 8px 30px rgba(28, 70, 110, .08);
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading span {
+    color: #6da8d1;
+    font-size: 12px;
+    letter-spacing: 4px;
+}
+
+.section-heading h2 {
+    color: #123e67;
+    font-size: 25px;
+    margin-top: 8px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e5edf5;
+}
+
+.profile img {
+    width: 220px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 115px 115px 25px 25px;
+    border: 7px solid #dceefa;
+    box-shadow: 0 10px 25px #174b7825;
+}
+
+.profile-info {
+    flex: 1;
+    min-width: 250px;
+    max-width: 530px;
+}
+
+.profile-info h3 {
+    font-size: 25px;
+    color: #174b78;
+    margin-bottom: 18px;
+}
+
+.profile-info p {
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 7px;
+}
+
+.profile-info strong {
+    color: #245c89;
+}
+
+/* INFORMATION BOXES */
+.details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.detail-box {
+    background: #f4f8fc;
+    border-radius: 16px;
+    padding: 23px;
+    border-left: 5px solid #5a9bc9;
+}
+
+.detail-box h4 {
+    color: #174b78;
+    font-size: 17px;
+    margin-bottom: 13px;
+}
+
+.detail-box p,
+.detail-box li {
+    font-size: 14px;
+    line-height: 2;
+}
+
+.detail-box ul {
+    padding-left: 20px;
+}
+
+/* DREAM BOX */
+.dream {
+    margin-top: 25px;
+    padding: 30px 20px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #102d50, #397caf);
+    border-radius: 18px;
+}
+
+.dream span {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #bfe4ff;
+}
+
+.dream h3 {
+    font-size: 23px;
+    margin-top: 10px;
+}
+
+/* FOOTER */
+footer {
+    background: #0b2441;
+    color: #d9eaff;
+    text-align: center;
+    padding: 35px 15px;
+    margin-top: 60px;
+}
+
+footer h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+footer p {
+    font-size: 12px;
+    color: #a9c9e5;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+    header {
+        padding: 55px 15px;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    nav {
+        gap: 18px;
+    }
+
+    .profile-section {
+        padding: 25px 18px;
+    }
+
+    .profile {
+        gap: 25px;
+    }
+
+    .profile img {
+        width: 185px;
+        height: 240px;
+    }
+
+    .profile-info {
+        text-align: center;
+    }
+
+    .profile-info h3 {
+        font-size: 21px;
+    }
+
+    .details {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 21px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="small-title">WELCOME TO OUR PORTFOLIO</div>
+    <h1>PORTFOLIO</h1>
+    <p>แฟ้มสะสมผลงานและประวัติส่วนตัว</p>
+    <p>รวบรวมประสบการณ์ ความสามารถ และเส้นทางสู่ความฝัน</p>
+</header>
+
+<!-- MENU -->
+<nav>
+    <a href="#home">หน้าแรก</a>
+    <a href="#person1">จิราพัชร</a>
+    <a href="#person2">อนงค์เนตร</a>
+</nav>
+
+<!-- INTRO -->
+<section class="intro" id="home">
+    <h2>ABOUT US</h2>
+    <p>
+        ยินดีต้อนรับสู่แฟ้มสะสมผลงานของพวกเรา<br>
+        พื้นที่สำหรับแนะนำตัวตน ความสามารถ และเป้าหมายในอนาคต
+    </p>
+</section>
+
+<div class="container">
+
+<!-- PERSON 1 -->
+<section class="profile-section" id="person1">
+
+    <div class="section-heading">
+        <span>PERSONAL PROFILE 01</span>
+        <h2>ประวัติส่วนตัวคนที่ 1</h2>
+    </div>
+
+    <div class="profile">
+        <img src="jirapat.jpg" alt="รูปโปรไฟล์จิราพัชร">
+
+        <div class="profile-info">
+            <h3>นางสาวจิราพัชร คงประมัญ</h3>
+
+            <p><strong>ระดับชั้น:</strong> มัธยมศึกษาปีที่ 6</p>
+
+            <p><strong>สถานศึกษา:</strong>
+            โรงเรียนทุ่งใหญ่เฉลิมราชอนุสรณ์รัชมังคลาภิเษก</p>
+
+            <p><strong>อาชีพในฝัน:</strong> ปลัดอำเภอ</p>
+        </div>
+    </div>
+
+    <div class="details">
+
+        <div class="detail-box">
+            <h4>ประวัติการศึกษาต่อ</h4>
+            <p>
+                มหาวิทยาลัยราชภัฏสุราษฎร์ธานี<br>
+                คณะมนุษยศาสตร์และสังคมศาสตร์
+            </p>
+        </div>
+
+        <div class="detail-box">
+            <h4>กิจกรรมที่เข้าร่วม</h4>
+            <ul>
+                <li>อบรมหัวข้อรณรงค์และต่อต้านยาเสพติด</li>
+                <li>อบรมหัวข้อจิตอาสาพัฒนาสังคม</li>
+                <li>แข่งขันมหกรรมวิชาการ กลุ่มสาระการงานอาชีพ</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="dream">
+        <span>MY FUTURE GOAL</span>
+        <h3>ปลัดอำเภอ</h3>
+    </div>
+
+</section>
+
+<!-- PERSON 2 -->
+<section class="profile-section" id="person2">
+
+    <div class="section-heading">
+        <span>PERSONAL PROFILE 02</span>
+        <h2>ประวัติส่วนตัวคนที่ 2</h2>
+    </div>
+
+    <div class="profile">
+        <img src="anongnet.jpg" alt="รูปโปรไฟล์อนงค์เนตร">
+
+        <div class="profile-info">
+            <h3>นางสาวอนงค์เนตร พาลกูล</h3>
+
+            <p><strong>ระดับชั้น:</strong> มัธยมศึกษาปีที่ 6</p>
+
+            <p><strong>สถานศึกษา:</strong>
+            โรงเรียนทุ่งใหญ่เฉลิมราชอนุสรณ์รัชมังคลาภิเษก</p>
+
+            <p><strong>อาชีพในฝัน:</strong> ครูภาษาไทย</p>
+        </div>
+    </div>
+
+    <div class="details">
+
+        <div class="detail-box">
+            <h4>ประวัติการศึกษาต่อ</h4>
+            <p>
+                มหาวิทยาลัยราชภัฏสุราษฎร์ธานี<br>
+                คณะครุศาสตร์<br>
+                สาขาวิชาภาษาไทย
+            </p>
+        </div>
+
+        <div class="detail-box">
+            <h4>ทักษะและความสามารถ</h4>
+            <ul>
+                <li>การเขียนเรียงความ</li>
+                <li>การอ่านทำนองเสนาะ</li>
+                <li>การคัดลายมือ</li>
+            </ul>
+        </div>
+
+        <div class="detail-box">
+            <h4>กิจกรรมที่เข้าร่วม</h4>
+            <ul>
+                <li>แข่งขันมหกรรมวิชาการ กลุ่มสาระภาษาไทย</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="dream">
+        <span>MY FUTURE GOAL</span>
+        <h3>ครูภาษาไทย</h3>
+    </div>
+
+</section>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <h3>OUR PORTFOLIO</h3>
+    <p>ความพยายามในวันนี้ คือความสำเร็จในวันข้างหน้า</p>
+</footer>
+
+</body>
+</html>
